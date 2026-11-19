@@ -12,36 +12,36 @@
 
 /* Global Colors - The following color variables are used throughout the website. Updating them here will change the color scheme of the entire website */
 :root { 
-  --background-color: #141414; /* Background color for the entire website, including individual sections */
-  --default-color: #d9d9d9; /* Default color used for the majority of the text content across the entire website */
-  --heading-color: #ededed; /* Color for headings, subheadings and title throughout the website */
-  --accent-color: #ff4d4f; /* Accent color that represents your brand on the website. It's used for buttons, links, and other elements that need to stand out */
-  --surface-color: #1c1c1c; /* The surface color is used as a background of boxed elements within sections, such as cards, icon boxes, or other elements that require a visual separation from the global background. */
+  --background-color: #f5f8ff; /* Background color for the entire website, including individual sections */
+  --default-color: #273449; /* Default color used for the majority of the text content across the entire website */
+  --heading-color: #101d33; /* Color for headings, subheadings and title throughout the website */
+  --accent-color: #1d4ed8; /* Accent color that represents your brand on the website. It's used for buttons, links, and other elements that need to stand out */
+  --surface-color: #ffffff; /* The surface color is used as a background of boxed elements within sections, such as cards, icon boxes, or other elements that require a visual separation from the global background. */
   --contrast-color: #ffffff; /* Contrast color for text, ensuring readability against backgrounds of accent, heading, or default colors. */
 }
 
 /* Nav Menu Colors - The following color variables are used specifically for the navigation menu. They are separate from the global colors to allow for more customization options */
 :root {
-  --nav-color: #d9d9d9;  /* The default color of the main navmenu links */
-  --nav-hover-color: #ff4d4f; /* Applied to main navmenu links when they are hovered over or active */
-  --nav-mobile-background-color: #2e2e2e; /* Used as the background color for mobile navigation menu */
-  --nav-dropdown-background-color: #2e2e2e; /* Used as the background color for dropdown items that appear when hovering over primary navigation items */
-  --nav-dropdown-color: #d9d9d9; /* Used for navigation links of the dropdown items in the navigation menu. */
-  --nav-dropdown-hover-color: #ff4d4f; /* Similar to --nav-hover-color, this color is applied to dropdown navigation links when they are hovered over. */
+  --nav-color: #1e293b;  /* The default color of the main navmenu links */
+  --nav-hover-color: #1d4ed8; /* Applied to main navmenu links when they are hovered over or active */
+  --nav-mobile-background-color: #ffffff; /* Used as the background color for mobile navigation menu */
+  --nav-dropdown-background-color: #ffffff; /* Used as the background color for dropdown items that appear when hovering over primary navigation items */
+  --nav-dropdown-color: #1e293b; /* Used for navigation links of the dropdown items in the navigation menu. */
+  --nav-dropdown-hover-color: #1d4ed8; /* Similar to --nav-hover-color, this color is applied to dropdown navigation links when they are hovered over. */
 }
 
 /* Color Presets - These classes override global colors when applied to any section or element, providing reuse of the sam color scheme. */
 
 .light-background {
-  --background-color: rgba(41, 41, 41, 0.8);
-  --surface-color: #484848;
+  --background-color: #edf3ff;
+  --surface-color: #ffffff;
 }
 
 .dark-background {
-  --background-color: #060606;
+  --background-color: #0b1424;
   --default-color: #ffffff;
   --heading-color: #ffffff;
-  --surface-color: #252525;
+  --surface-color: #14213a;
   --contrast-color: #ffffff;
 }
 
@@ -80,63 +80,11 @@ h6 {
   font-family: var(--heading-font);
 }
 
-/* PHP Email Form Messages
-------------------------------*/
-.php-email-form .error-message {
-  display: none;
-  background: #df1529;
-  color: #ffffff;
-  text-align: left;
-  padding: 15px;
-  margin-bottom: 24px;
-  font-weight: 600;
-}
-
-.php-email-form .sent-message {
-  display: none;
-  color: #ffffff;
-  background: #059652;
-  text-align: center;
-  padding: 15px;
-  margin-bottom: 24px;
-  font-weight: 600;
-}
-
-.php-email-form .loading {
-  display: none;
-  background: var(--surface-color);
-  text-align: center;
-  padding: 15px;
-  margin-bottom: 24px;
-}
-
-.php-email-form .loading:before {
-  content: "";
-  display: inline-block;
-  border-radius: 50%;
-  width: 24px;
-  height: 24px;
-  margin: 0 10px -6px 0;
-  border: 3px solid var(--accent-color);
-  border-top-color: var(--surface-color);
-  animation: php-email-form-loading 1s linear infinite;
-}
-
-@keyframes php-email-form-loading {
-  0% {
-    transform: rotate(0deg);
-  }
-
-  100% {
-    transform: rotate(360deg);
-  }
-}
-
 /*--------------------------------------------------------------
 # Global Header
 --------------------------------------------------------------*/
 .header {
-  --heading-color: #ffffff;
+  --heading-color: #101d33;
   color: var(--default-color);
   background-color: var(--background-color);
   padding: 15px 0;
@@ -200,19 +148,19 @@ h6 {
 /* Global Header on Scroll
 ------------------------------*/
 .scrolled .header {
-  --background-color: rgba(20, 20, 20, 0.8);
+  --background-color: rgba(255, 255, 255, 0.96);
 }
 
 /* Index Page Header
 ------------------------------*/
 .index-page .header {
-  --background-color: rgba(255, 255, 255, 0);
+  --background-color: rgba(255, 255, 255, 0.96);
 }
 
 /* Index Page Header on Scroll
 ------------------------------*/
 .index-page.scrolled .header {
-  --background-color: rgba(20, 20, 20, 0.8);
+  --background-color: rgba(255, 255, 255, 0.96);
 }
 
 /*--------------------------------------------------------------
@@ -765,39 +713,48 @@ section,
 # Hero Section
 --------------------------------------------------------------*/
 .hero {
-  padding-top: 80px;
+  --background-color: #0b1424;
+  --default-color: #243248;
+  --heading-color: #10203a;
+  --surface-color: #ffffff;
+  --contrast-color: #ffffff;
+  padding: 112px 0 64px;
   min-height: 100vh;
   position: relative;
   display: flex;
   align-items: center;
-  justify-content: center;
+  justify-content: flex-start;
   overflow: hidden;
-  padding-bottom: 80px;
+  background: linear-gradient(90deg, #f7faff 0%, #eaf1ff 50%, #0b1424 50%, #0b1424 100%);
 }
 
 .hero img {
   position: absolute;
-  inset: 0;
+  top: 0;
+  right: 0;
+  left: auto;
   display: block;
-  width: 100%;
+  width: 50%;
   height: 100%;
-  object-fit: cover;
-  object-position: center top;
+  object-fit: contain;
+  object-position: center bottom;
+  background-color: #0b1424;
   z-index: 1;
 }
 
 .hero:before {
-  content: "";
-  background: color-mix(in srgb, var(--background-color), transparent 50%);
-  position: absolute;
-  inset: 0;
-  z-index: 2;
-  border-radius: 0;
+  display: none;
 }
 
 .hero .container {
   position: relative;
   z-index: 3;
+  width: 100%;
+}
+
+.hero .hero-content {
+  max-width: 560px;
+  text-align: left !important;
 }
 
 .hero h2 {
@@ -808,8 +765,9 @@ section,
 
 .hero p {
   margin: 10px 0 0 0;
-  font-size: 24px;
-  color: color-mix(in srgb, var(--default-color), transparent 20%);
+  font-size: 20px;
+  line-height: 1.6;
+  color: #334155;
 }
 
 .hero p span {
@@ -821,7 +779,7 @@ section,
 .hero .social-links {
   margin-top: 30px;
   display: flex;
-  justify-content: center;
+  justify-content: flex-start;
   gap: 15px;
 }
 
@@ -844,13 +802,46 @@ section,
   transform: translateY(-3px);
 }
 
-@media (max-width: 768px) {
+@media (max-width: 991px) {
+  .hero {
+    display: block;
+    min-height: 0;
+    padding: 0;
+    background: #0b1424;
+  }
+
+  .hero img {
+    position: relative;
+    inset: auto;
+    width: 100%;
+    height: min(65vh, 520px);
+    min-height: 320px;
+    object-fit: contain;
+    object-position: center;
+  }
+
+  .hero .container {
+    max-width: none;
+    padding: 36px 16px 44px;
+    background: #f7faff;
+  }
+
+  .hero .hero-content {
+    width: 100%;
+    max-width: none;
+    text-align: center !important;
+  }
+
   .hero h2 {
     font-size: 32px;
   }
 
   .hero p {
-    font-size: 20px;
+    font-size: 18px;
+  }
+
+  .hero .social-links {
+    justify-content: center;
   }
 }
 
@@ -902,7 +893,7 @@ section,
   position: relative;
   border-radius: 50%;
   padding: 6px;
-  background: linear-gradient(135deg, var(--accent-color), color-mix(in srgb, var(--accent-color), #ff6b9d 50%));
+  background: linear-gradient(135deg, var(--accent-color), color-mix(in srgb, var(--accent-color), #60a5fa 50%));
 }
 
 .about .profile-card .profile-header .profile-avatar img {
@@ -1270,7 +1261,7 @@ section,
 
 .resume .section-header .header-content .section-badge {
   display: inline-block;
-  background: linear-gradient(135deg, var(--accent-color), color-mix(in srgb, var(--accent-color), #6c5ce7 20%));
+  background: linear-gradient(135deg, var(--accent-color), color-mix(in srgb, var(--accent-color), #60a5fa 20%));
   color: var(--contrast-color);
   padding: 0.5rem 1.2rem;
   border-radius: 25px;
@@ -1341,7 +1332,7 @@ section,
 }
 
 .resume .experience-section .experience-cards .exp-card.featured::before {
-  background: linear-gradient(90deg, var(--accent-color), color-mix(in srgb, var(--accent-color), #6c5ce7 20%), var(--accent-color));
+  background: linear-gradient(90deg, var(--accent-color), color-mix(in srgb, var(--accent-color), #60a5fa 20%), var(--accent-color));
 }
 
 .resume .experience-section .experience-cards .exp-card .card-header {
@@ -1354,7 +1345,7 @@ section,
 .resume .experience-section .experience-cards .exp-card .card-header .company-logo {
   width: 50px;
   height: 50px;
-  background: linear-gradient(135deg, var(--accent-color), color-mix(in srgb, var(--accent-color), #6c5ce7 20%));
+  background: linear-gradient(135deg, var(--accent-color), color-mix(in srgb, var(--accent-color), #60a5fa 20%));
   border-radius: 12px;
   display: flex;
   align-items: center;
@@ -1456,7 +1447,7 @@ section,
   top: 0;
   width: 50px;
   height: 50px;
-  background: linear-gradient(135deg, var(--accent-color), color-mix(in srgb, var(--accent-color), #6c5ce7 20%));
+  background: linear-gradient(135deg, var(--accent-color), color-mix(in srgb, var(--accent-color), #60a5fa 20%));
   border-radius: 50%;
   display: flex;
   align-items: center;
@@ -1803,7 +1794,7 @@ section,
 }
 
 .services .cta-box {
-  background: linear-gradient(135deg, var(--accent-color), color-mix(in srgb, var(--accent-color), #667eea 40%));
+  background: linear-gradient(135deg, var(--accent-color), color-mix(in srgb, var(--accent-color), #60a5fa 40%));
   border-radius: 20px;
   padding: 45px 50px;
   color: var(--contrast-color);
@@ -2255,14 +2246,14 @@ section,
   color: var(--default-color);
 }
 
-.contact .php-email-form {
+.contact .contact-form {
   background: var(--surface-color);
   padding: 40px;
   border-radius: 10px;
   border: 1px solid color-mix(in srgb, var(--default-color), transparent 90%);
 }
 
-.contact .php-email-form .form-control {
+.contact .contact-form .form-control {
   color: var(--default-color);
   background-color: var(--surface-color);
   border: 1px solid color-mix(in srgb, var(--default-color), transparent 80%);
@@ -2272,20 +2263,20 @@ section,
   transition: 0.3s;
 }
 
-.contact .php-email-form .form-control:focus {
+.contact .contact-form .form-control:focus {
   border-color: var(--accent-color);
   box-shadow: 0 0 0 0.2rem color-mix(in srgb, var(--accent-color), transparent 80%);
 }
 
-.contact .php-email-form .form-control::placeholder {
+.contact .contact-form .form-control::placeholder {
   color: color-mix(in srgb, var(--default-color), transparent 70%);
 }
 
-.contact .php-email-form textarea.form-control {
+.contact .contact-form textarea.form-control {
   min-height: 120px;
 }
 
-.contact .php-email-form button[type=submit] {
+.contact .contact-form button[type=submit] {
   background: var(--accent-color);
   color: var(--contrast-color);
   border: none;
@@ -2297,7 +2288,7 @@ section,
   transition: 0.3s;
 }
 
-.contact .php-email-form button[type=submit]:hover {
+.contact .contact-form button[type=submit]:hover {
   background: color-mix(in srgb, var(--accent-color), transparent 20%);
   transform: translateY(-2px);
 }
@@ -2321,7 +2312,7 @@ section,
     font-size: 16px;
   }
 
-  .contact .php-email-form {
+  .contact .contact-form {
     padding: 30px 20px;
   }
 }
